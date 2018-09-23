@@ -3,7 +3,7 @@
 <link href="https://ssl.gstatic.com/docs/script/css/add-ons.css"
       rel="stylesheet">
 
-<link href="https://raw.githubusercontent.com/anicholas1/test-google/master/test.css"
+<link href="anicholas1.github.com/test.css"
       rel="stylesheet">
 
 <!-- The sidebar will have a input box and the search button -->
@@ -38,11 +38,14 @@
     $(function() {
 
         $('#get_summary').on('click', function() {
-            google.script.run.withSuccessHandler(wait).showSidebar();
+            $('#summary').html('')
+            $('#story').html('');
             google.script.run.withSuccessHandler(insertSummary).getSummary();
         });
 
         $('#get_story').on('click', function() {
+            $('#summary').html('')
+            $('#story').html('');
             google.script.run.withSuccessHandler(insertStory).getStory();
         });
 
@@ -63,8 +66,5 @@
         }
     }
 
-    function wait(){
-        return ""
-    }
 
 </script>

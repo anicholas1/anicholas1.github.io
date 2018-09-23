@@ -19,19 +19,12 @@ function showSidebar() {
     DocumentApp.getUi().showSidebar(html);
 }
 
-function displaySummary(){
-    const html = HtmlService.createHtmlOutputFromFile('summary.html')
-        .setTitle("Summaries");
-    DocumentApp.getUi().showSidebar(html);
-}
-
 /* Get summary fetches articles and summarise from api, and returns to handler function in home.html */
 function getSummary(){
     const body = DocumentApp.getActiveDocument().getBody();
     // Use editAsText to obtain a single text element containing
     // all the characters in the document.
     const text = body.editAsText().getText();
-
 
     const test_text = "trump tariffs china";
     const options = {
@@ -41,7 +34,7 @@ function getSummary(){
         "headers" : {"Accept" : "application/json"},
         "muteHttpExceptions" : true
     };
-    const response = UrlFetchApp.fetch("http://18.207.157.28:10000/summary/search/", options);
+    const response = UrlFetchApp.fetch("http://34.229.255.72:10000/summary/search/", options);
     const json = response.getContentText();
     const data = JSON.parse(json);
     Logger.log(data.articles);
@@ -67,7 +60,7 @@ function getStory(){
         "headers" : {"Accept" : "application/json"},
         "muteHttpExceptions" : true
     };
-    const response = UrlFetchApp.fetch("http://54.204.154.15:10010/api/facts", options);
+    const response = UrlFetchApp.fetch("http://34.229.255.72:10010/api/facts", options);
     // Logger.log(response.getContentText())
     const json = response.getContentText();
     const data = JSON.parse(json);
@@ -75,9 +68,6 @@ function getStory(){
     return data.html
 
 }
-
-
-
 
 function testCode() {
     Logger.log(HtmlService
