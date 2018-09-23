@@ -8,16 +8,10 @@ body {
 
 #logo {
     display:block;
-    max-width: 300px;
+    max-width: 75px;
     margin: 0 auto;
     width: 90%;
 }
-
-/* Applies to all elements with <... class="someclass"> specified. */
-.test_class { color: red; }
-
-/* Applies to the element with <... id="someid"> specified. */
-#test_id { color: blue; }
 
 .btn-group button {
     /*background-color: #4CAF50; !* Green background *!*/
