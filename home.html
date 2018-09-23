@@ -8,23 +8,14 @@
 
 <!-- The sidebar will have a input box and the search button -->
 <div class="sidebar">
+    <img id="logo" src="https://anicholas1.github.io/images/logo.png" alt="DebateBot Logo">
 
-
-    <div>
-        <button id="get_summary">Summaries</button>
+    <div class="btn-group">
+        <button class="btn-group" id="get_summary"> Summaries</button>
+        <button class="btn-group" id="get_story">Story</button>
     </div>
 
-    <div id='summary'>
-    </div>
-
-    <br>
-    <br>
-
-    <div>
-        <button id="get_story">Story</button>
-    </div>
-
-    <div id='story'>
+    <div id='data'>
     </div>
 
 </div>
@@ -38,14 +29,12 @@
     $(function() {
 
         $('#get_summary').on('click', function() {
-            $('#summary').html('')
-            $('#story').html('');
+            $('#data').html('')
             google.script.run.withSuccessHandler(insertSummary).getSummary();
         });
 
         $('#get_story').on('click', function() {
-            $('#summary').html('')
-            $('#story').html('');
+            $('#data').html('');
             google.script.run.withSuccessHandler(insertStory).getStory();
         });
 
@@ -56,13 +45,13 @@
         for (var i = 0; i < data.length; i++) {
             var txt = document.createElement("p");    // Create with DOM
             txt.innerHTML = data[i];
-            $('#summary').append(txt);
+            $('#data').append(txt);
             // $('#summary').text(data);
         }}
     // Insert div tag with html of facts
     function insertStory(data){
         for (var i = 0; i < data.length; i++) {
-            $('#story').append(data[i] + "<br>");
+            $('#data').append(data[i] + "<br>");
         }
     }
 
