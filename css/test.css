@@ -1,17 +1,17 @@
 /* Test comment */
 body {
     margin: 25px;
-    background-color: #31aab5;
+    background-color: #a2d9dd;
     font-family: arial, sans-serif;
     font-size: 14px;
 }
 
-/*!* Applies to all <h1>...</h1> elements. *!*/
-/*h1 {*/
-    /*font-size: 35px;*/
-    /*font-weight: normal;*/
-    /*margin-top: 5px;*/
-/*}*/
+#logo {
+    display:block;
+    max-width: 300px;
+    margin: 0 auto;
+    width: 90%;
+}
 
 /* Applies to all elements with <... class="someclass"> specified. */
 .test_class { color: red; }
@@ -20,7 +20,7 @@ body {
 #test_id { color: blue; }
 
 .btn-group button {
-    background-color: #4CAF50; /* Green background */
+    /*background-color: #4CAF50; !* Green background *!*/
     border: 1px solid green; /* Green border */
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
