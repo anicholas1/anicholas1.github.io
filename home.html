@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<!-- <link href="https://ssl.gstatic.com/docs/script/css/add-ons.css"
-      rel="stylesheet"> -->
-
 <link href="https://anicholas1.github.io/css/test.css"
+      rel="stylesheet">
+
+<link href="https://ssl.gstatic.com/docs/script/css/add-ons.css"
       rel="stylesheet">
 
 <!-- The sidebar will have a input box and the search button -->
@@ -12,8 +12,8 @@
     <br>
     <br>
     <div class="btn-group">
-        <button class="button" id="get_summary"> Summaries</button>
-        <button class="button" id="get_story">Story</button>
+        <button id="get_summary"> Summaries</button>
+        <button id="get_story">Story</button>
     </div>
 
     <div id='data'>
@@ -51,8 +51,12 @@
         }}
     // Insert div tag with html of facts
     function insertStory(data){
-        for (var i = 0; i < data.length; i++) {
-            $('#data').append(data[i] + "<br>");
+        for (var i = 0; i < 4; i++) {
+            try {
+                $('#data').append(data[i] + "<br>");
+            }
+            catch(error) {
+            }
         }
     }
 
