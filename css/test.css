@@ -15,11 +15,12 @@ body {
 }
 
 .btn-group button {
+    border-radius: 25px;
     text-align: center;
     background-color: white; /* Green background */
     border: 1px solid royalblue; /* Green border */
     color: black; /* White text */
-    padding: 5px 10px; /* Some padding */
+    padding: 5px 15px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
 
