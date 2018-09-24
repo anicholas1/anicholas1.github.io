@@ -6,14 +6,16 @@ body {
     font-size: 14px;
 }
 
-.logo{
-    display:block;
-    max-width: 200px;
+.logo {
+    display: block;
+    max-width: 250px;
     margin: 0 auto;
     width: 100%;
+    text-align: center;
 }
 
 .btn-group button {
+    text-align: center;
     background-color: white; /* Green background */
     /*border: 1px solid royalblue; !* Green border *!*/
     color: black; /* White text */
