@@ -17,9 +17,9 @@ body {
 .btn-group button {
     text-align: center;
     background-color: white; /* Green background */
-    /*border: 1px solid royalblue; !* Green border *!*/
+    border: 1px solid royalblue; /* Green border */
     color: black; /* White text */
-    padding: 10px 24px; /* Some padding */
+    padding: 1px 10px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
 
