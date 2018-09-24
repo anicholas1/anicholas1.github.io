@@ -34,7 +34,7 @@ body {
     display: table;
 }
 
-/*!* Add a background color on hover *!*/
-/*.btn-group button:hover {*/
-    /*background-color: #3e8e41;*/
-/*}*/
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: royalblue;
+}
