@@ -51,11 +51,14 @@
         }}
     // Insert div tag with html of facts
     function insertStory(data){
-        for (var i = 0; i < 4; i++) {
-            try {
-                $('#data').append(data[i] + "<br>");
-            }
-            catch(error) {
+        for (let i = 0; i < 4; i++) {
+            let facts = data[i][1];
+            for (let j = 0; j < 2; j++) {
+                try {
+                    $('#data').append(facts[i] + "<br>");
+                }
+                catch(error) {
+                }
             }
         }
     }
