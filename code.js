@@ -34,7 +34,7 @@ function getSummary(){
         "headers" : {"Accept" : "application/json"},
         "muteHttpExceptions" : true
     };
-    const response = UrlFetchApp.fetch("http://34.229.255.72:10000/summary/search/", options);
+    const response = UrlFetchApp.fetch("Dbot-Google-105049504.us-east-1.elb.amazonaws.com/api/summary/search/", options);
     const json = response.getContentText();
     const data = JSON.parse(json);
     Logger.log(data.articles);
@@ -60,7 +60,7 @@ function getStory(){
         "headers" : {"Accept" : "application/json"},
         "muteHttpExceptions" : true
     };
-    const response = UrlFetchApp.fetch("http://34.229.255.72:10010/api/facts", options);
+    const response = UrlFetchApp.fetch("Dbot-Google-105049504.us-east-1.elb.amazonaws.com/api/story/facts", options);
     // Logger.log(response.getContentText())
     const json = response.getContentText();
     const data = JSON.parse(json);
