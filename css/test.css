@@ -42,9 +42,9 @@ body {
     background-color: royalblue;
 }
 
-*{
-    background-color: #fff;
-}
+/**{*/
+    /*background-color: #fff;*/
+/*}*/
 
 div{
     width: 90%;
@@ -61,7 +61,7 @@ h1{
 p{
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased !important;
-    -moz-font-smoothing: antialiased !important;
+    /*-moz-font-smoothing: antialiased !important;*/
     text-rendering: optimizelegibility !important;
     letter-spacing: .03em;
     color: #777;
@@ -81,11 +81,11 @@ p{
     /*text-align: justify;*/
 /*}*/
 
-#two p{
-    color: #333;
-    padding: 0 0 1em 0;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.8;
-    text-align: justify;
-}
+/*#two p{*/
+    /*color: #333;*/
+    /*padding: 0 0 1em 0;*/
+    /*font-weight: 400;*/
+    /*font-size: 1rem;*/
+    /*line-height: 1.8;*/
+    /*text-align: justify;*/
+/*}*/
