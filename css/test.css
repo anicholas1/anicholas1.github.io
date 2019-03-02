@@ -65,16 +65,21 @@ p{
     text-rendering: optimizelegibility !important;
     letter-spacing: .03em;
     color: #777;
-}
-
-#one p{
-    color: #777;
     font-size: 16px;
     font-family: "Roboto", Arial;
     line-height: 1.25em;
     padding: 0 0 1em 0;
     text-align: justify;
 }
+
+/*#one p{*/
+    /*color: #777;*/
+    /*font-size: 16px;*/
+    /*font-family: "Roboto", Arial;*/
+    /*line-height: 1.25em;*/
+    /*padding: 0 0 1em 0;*/
+    /*text-align: justify;*/
+/*}*/
 
 #two p{
     color: #333;
