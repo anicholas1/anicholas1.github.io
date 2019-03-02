@@ -46,9 +46,22 @@
     // Success Handler inserts html once summary api call has succeded
     function insertSummary(data){
         for (var i = 0; i < data.length; i++) {
-            var txt = document.createElement("p");    // Create with DOM
-            txt.innerHTML = data[i];
-            $('#data').append(txt);
+            var paragraph = document.createElement("p");    // Create with DOM
+            var summary = data[i];
+
+            // Add elipsis and readmore if too long
+            if (summary.length > 150) {
+                summary.splice(150, 0, "<span id=\"dots\">...</span><span id=\"more\">");
+                summary += "</span>";
+                paragraph.innerHTML = summary;
+                $('#data').append(paragraph);
+                let bt = "<button onclick=\"readMore()\" id=\"myBtn\">Read more</button>";
+                $('#data').append(bt);
+            } else {
+                paragraph.innerHTML = summary;
+                $('#data').append(paragraph);
+            }
+
             // $('#summary').text(data);
         }}
     // Insert div tag with html of facts
@@ -65,6 +78,24 @@
                 catch(error) {
                 }
             }
+        }
+    }
+</script>
+
+<script>
+    function readMore() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
         }
     }
 </script>

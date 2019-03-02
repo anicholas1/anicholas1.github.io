@@ -72,6 +72,8 @@ p{
     text-align: justify;
 }
 
+#more {display: none;}
+
 /*#one p{*/
     /*color: #777;*/
     /*font-size: 16px;*/
