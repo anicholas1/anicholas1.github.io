@@ -54,10 +54,9 @@
 
                 // Add elipsis
                 let hide_text = "<a class=\"read-more-show hide\" href=\"#\">Read More</a><span class=\"read-more-content\">";
-                // TODO How do I have unique ids for each read more button so the funciton doesn't grab them all
                 let hide_less_text = "<a class=\"read-more-hide hide\" href=\"#\">Read Less</a></span></p>";
 
-                var elipsis = summary.slice(0, 250) + hide_text + summary.slice(250) + hide_less_text;
+                let elipsis = summary.slice(0, 250) + hide_text + summary.slice(250) + hide_less_text;
 
                 paragraph.innerHTML = elipsis;
                 $('#data').append(paragraph);
@@ -86,6 +85,10 @@
         }
     }
 
+</script>
+
+<script>
+
     // Hide the extra content initially, using JS so that if JS is disabled, no problemo:
     $('.read-more-content').addClass('hide')
     $('.read-more-show, .read-more-hide').removeClass('hide')
@@ -104,6 +107,5 @@
         p.prev('.read-more-show').removeClass('hide'); // Hide only the preceding "Read More"
         e.preventDefault();
     });
-
 </script>
 
